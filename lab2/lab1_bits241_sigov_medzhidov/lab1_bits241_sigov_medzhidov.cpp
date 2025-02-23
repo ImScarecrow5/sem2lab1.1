@@ -59,7 +59,7 @@ void zad2()
 }
 void zad3()
 {
-	int n;
+int n;
 cout << "Введите размер массива: ";
 cin >> n;
 
