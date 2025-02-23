@@ -59,6 +59,44 @@ void zad2()
 }
 void zad3()
 {
+	int n;
+cout << "Введите размер массива: ";
+cin >> n;
+
+int* arr = new int[n];
+
+cout << "Введите поочередно элементы массива\n";
+
+for (int i = 0; i < n; ++i)
+{
+    cin >> arr[i];
+}
+
+// sort
+
+for (int i = 0; i < n - 1; ++i)
+{
+    int ind_min = i;
+    for (int j = i + 1; j < n; ++j)
+    {
+        if (arr[j] < arr[ind_min])
+        {
+            int temp = arr[j];
+            arr[j] = arr[ind_min];
+            arr[ind_min] = temp;
+            ind_min = j;
+        }
+    }
+}
+
+// output arr
+
+for (int i = 0; i < n; ++i)
+{
+    cout << arr[i] << " ";
+}
+
+// ссылка с объяснением https://ikt.muctr.ru/images/inform_new/lec3.pdf
 }
 
 int main()
